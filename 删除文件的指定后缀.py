@@ -1,7 +1,7 @@
 import os
 
 # 指定目录
-directory = "D:\BaiduNetdiskDownload\001.黑马Java2022在线就业课V12.5版本（推荐）\03阶段三：JavaWeb\day12-Filter&Listener&AJAX\00-讲义\assets"  # 替换为您的目录路径
+directory = "D:\\BaiduNetdiskDownload\\001.黑马Java2022在线就业课V12.5版本（推荐）\\05阶段五：项目实战-瑞吉外卖\\03-Linux\\02-讲义\\Vmware安装Linux问题\\assets"  # 替换为您的目录路径
 
 # 指定要删除的后缀
 suffix_to_remove = "【瑞客论坛 www.ruike1.com】"
