@@ -1,13 +1,13 @@
 import os
 
 # The directory where the file with the suffix needs to be deleted.
-directory = "J:\\牛客论坛项目(1)\\开发工具"  # Replace with your directory path
+directory = "C:\\Users\\Administrator\\Desktop\\293-100617601-专栏课-黄佳-LangChain 实战课（完结）"  # Replace with your directory path
 
 # Specify the suffix to be deleted.
-suffix_to_remove = "【瑞客论坛 www.ruike1.com】"
+suffix_to_remove = "[天下无鱼][shikey.com]"
 
 # Document type
-document_type = ['.wmv', '.png', '.txt', '.pdf','.zip']
+document_type = ['.wmv', '.png', '.txt', '.pdf','.zip','.md','.mp3']
 
 # Loop over files in a directory
 for filename in os.listdir(directory):
