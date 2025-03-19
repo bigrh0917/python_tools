@@ -1,7 +1,7 @@
 import os
 
 # The directory where the file with the suffix needs to be deleted.
-directory = "J:\\牛客论坛项目(1)\\开发工具"  # Replace with your directory path
+directory = "E:\\05阶段五：项目实战-瑞吉外卖\\05-瑞吉外卖-项目优化\\03-讲义\\瑞吉外卖项目优化-day02\\assets"  # Replace with your directory path
 
 # Specify the suffix to be deleted.
 suffix_to_remove = "【瑞客论坛 www.ruike1.com】"
