@@ -1,25 +1,38 @@
 import os
 
 # The directory where the file with the suffix needs to be deleted.
-directory = "E:\\05阶段五：项目实战-瑞吉外卖\\05-瑞吉外卖-项目优化\\03-讲义\\瑞吉外卖项目优化-day02\\assets"  # Replace with your directory path
+directory = "E:\\java\\牛客论坛项目"  # Replace with your directory path
 
-# Specify the suffix to be deleted.
-suffix_to_remove = "【瑞客论坛 www.ruike1.com】"
+# Specify the suffix to be removed.
+suffix_to_remove = "【瑞客论 坛 www.ruike1.com】"
 
 # Document type
 document_type = ['.wmv', '.png', '.txt', '.pdf','.zip']
 
-# Loop over files in a directory
-for filename in os.listdir(directory):
-    for suffix in document_type:
-        if filename.endswith(f"{suffix_to_remove}{suffix}"):
-            # Construct a new filename, removing the specified suffix part
-            new_filename = filename.replace(f"{suffix_to_remove}{suffix}", f"{suffix}")
+# Function to recursively process files in directories
+def process_directory(dir_path):
+    # Loop over all entries in the directory
+    for entry in os.listdir(dir_path):
+        # Build the full path
+        full_path = os.path.join(dir_path, entry)
+        
+        # If it's a directory, recursively process it
+        if os.path.isdir(full_path):
+            process_directory(full_path)
+        # If it's a file, check if it needs to be renamed
+        elif os.path.isfile(full_path):
+            for suffix in document_type:
+                if entry.endswith(f"{suffix_to_remove}{suffix}"):
+                    # Construct a new filename, removing the specified suffix part
+                    new_filename = entry.replace(f"{suffix_to_remove}{suffix}", f"{suffix}")
 
-            # Build the complete old file path and new file path
-            old_filepath = os.path.join(directory, filename)
-            new_filepath = os.path.join(directory, new_filename)
+                    # Build the new file path
+                    new_filepath = os.path.join(dir_path, new_filename)
 
-            # Rename a file
-            os.rename(old_filepath, new_filepath)
-            print(f"rename: {old_filepath} to {new_filepath}")
+                    # Rename the file
+                    os.rename(full_path, new_filepath)
+                    print(f"rename: {full_path} to {new_filepath}")
+                    break  # Once renamed, no need to check other suffixes
+
+# Start processing from the root directory
+process_directory(directory)
