@@ -1,10 +1,10 @@
 import os
 
 # The directory where the file with the suffix needs to be deleted.
-directory = "E:\\java\\牛客论坛项目"  # Replace with your directory path
+directory = "C:\\baidunetdiskdownload\\19、LLMs面试宝典【赠送】"  # Replace with your directory path
 
 # Specify the suffix to be removed.
-suffix_to_remove = "【瑞客论 坛 www.ruike1.com】"
+suffix_to_remove = "【找it资源dbbp.net】【微 信648765304】"
 
 # Document type
 document_type = ['.wmv', '.png', '.txt', '.pdf','.zip']
